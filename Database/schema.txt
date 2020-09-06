@@ -1,0 +1,49 @@
+Flights
+-
+year smallint
+month smallint
+day smallint
+day_of_week smallint
+airline varchar fk >- Airlines.airline
+flight_number smallint
+tail_number varchar
+origin_airport varchar fk >- Airports.airport
+destination_airport varchar fk >- Airports.airport
+schedule_departure smallint
+departure_time smallint
+departure_delay smallint
+taxi_out smallint
+wheels_off smallint
+scheduled_time smallint
+elapsed_time smallint
+air_time smallint
+distance smallint
+wheels_on smallint
+taxi_in smallint
+scheduled_arrival smallint
+arrival_time smallint
+arrival_delay smallint
+diverted smallint
+cancelled smallint
+cancellation_reason varchar
+air_system_delay smallint
+security_delay smallint
+airline_delay smallint
+late_aircraft_delay smallint
+weather_delay smallint
+flight_id pk
+
+Airlines
+-
+iata_code varchar pk
+airline varchar pk
+
+Airports
+-
+iata_code varchar pk
+airport varchar pk
+city varchar
+state varchar
+country varchar
+latitude decimal
+longitude decimal
