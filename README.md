@@ -18,7 +18,16 @@ Pandas will be used to create a DataFrame, clean the data, and perform explorato
 Postgres is the database we intend to use, and we will use pgAdmin to display the data. 
 
 ## Machine Learning
-SciKitLearn is the ML library we will be using to create a classifier. Our training and testing setup will ideally be divided by 80% and 20%, respectively. 
+
+### Data Preprocessing and Feature Engineering
+The initial data file was explored and cleaning using python and pandas. As we are interested in departure and arrival delays, all rows with cancelled or diverted flights were removed. The remaining delay times had a low varience and normal distribution centered around 0, with a weak right skew stretching from 200 minuts to 1700 minuits. The large delays are caused by factors outside the airlines control, and rows with delays over 120 minuits were dropped. Of the columns present in the data set, multiple columns were made up of a linear combination of other columns. The redundant columns were dropped removing linear relationships between columns. The remaining data consisted of 23 columns, and 3,292,910 rows. 
+The categorical data was encoded using a dictionary to replace stings with integers. The dictionary and replace method was chosen because it allows us to later create an interactive tool where airports/airlines can be input, and we will be able to use the dictionary to convert them to integers when passing to the ml model. These categorical columns were then encoded using sklearn OneHotEncoder. 
+
+### Machine learning model
+Due to the size of the data and memory limitations, the data was read in chunks. Each chunk was split into training and testing sets of 80% and 20% respectively, using sklearn train_test_split. This data was used to train, or continue trainging after the first chunk, and test our model with each chunk itteration.
+Tensor flow Keras' sequential model was used to create a deep neural net (DNN). This was chosen becasue DNN's perform well with large amounts of data, have the ability to learn and model non-linear and complex relatonships, perform well with high volatility and non-constant variance, and has superior prediction power to other regression models. 
+Our model was tuned using hyper parameter testing on the number of neurons in each hidden level, and activation functions. Overfitting was prevented by hyper parameter tuning the number of epochs. 
+
 
 ## Dashboard
 Tableau will be used to visualize our results and create a story answering our question. 
