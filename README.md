@@ -8,7 +8,7 @@ The airline industry is close to $900 billion in size worldwide as of 2019, with
 This dataset provides information on the flights in 2015. Data includes the date of the flight, the airline, flight and tail number, the origin and destination airport, the times and distance associated with the flights as well as the reason for delay and if the flight was cancelled or diverted. With 31 columns and so much data, we will remove certain columns to clean the dataset. Those columns include the year because all this data is only for 2015. We will also remove the cancellation reason column because 98% of the values are null. As well, we will remove all the flights that were cancelled as it does not provide us with any data on factors that could’ve influence delay and we will remove the whole cancelled column as well.
 
  
-## Below is the Pandas project’s files and folders description as of Segment-2:-
+## Below is the Pandas project files and folders description as of Segment-2:-
 
 1)	Database: Data base folder has 3 files in it :-
 
