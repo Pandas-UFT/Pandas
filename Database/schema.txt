@@ -1,0 +1,41 @@
+Flights
+-
+"Unnamed: 0" pk
+month smallint
+day smallint
+day_of_week smallint
+airline varchar fk >- Airlines.iata_code
+flight_number smallint
+tail_number varchar
+origin_airport varchar fk >- Airports.iata_code
+destination_airport varchar fk >- Airports.iata_code
+scheduled_departure smallint
+departure_delay decimal
+elapsed_time decimal
+air_time decimal
+distance smallint
+wheels_on decimal
+taxi_in decimal
+scheduled_arrival smallint
+arrival_time decimal
+arrival_delay decimal
+air_system_delay decimal
+security_delay decimal
+airline_delay decimal
+late_aircraft_delay decimal
+weather_delay decimal
+
+Airlines
+-
+iata_code varchar pk
+airline varchar pk
+
+Airports
+-
+iata_code varchar pk
+airport varchar pk
+city varchar
+state varchar
+country varchar
+latitude decimal
+longitude decimal
