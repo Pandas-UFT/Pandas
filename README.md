@@ -52,7 +52,7 @@ Our model was tuned using hyper parameter testing on the number of neurons in ea
 
 
 ## Dashboard
-Tableau will be used to visualize our results and create a story answering our question. 
+Dash will be used to visualize our results and create a story answering our question. 
 
 # Pandas - Communication Protocol
 
