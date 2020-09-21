@@ -53,3 +53,8 @@ Our model was tuned using hyper parameter testing on the number of neurons in ea
 
 ## Dashboard
 Dash will be used to visualize our results and create a story answering our question. 
+
+
+## Google Slide Deck Link
+https://docs.google.com/presentation/d/1lVltMy94bXFktCDCRaQnMVSpEe5rUilISrqvT9a1mas/edit?usp=sharing
+
