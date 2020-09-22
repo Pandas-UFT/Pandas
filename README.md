@@ -39,7 +39,9 @@ https://docs.google.com/presentation/d/1lVltMy94bXFktCDCRaQnMVSpEe5rUilISrqvT9a1
 1)	Database: Database folder
 
   a.	Database.ipynb: Though this file, connected to Database to create new flight database using postgres. 
+  
   b.	schema.png: This is the ERD that shows the relationship among Flights, Airlines and Airports table.
+  
   c.	schema.txt: ERD text file.
 
 2)	figures: folder of data visualizations
