@@ -7,28 +7,6 @@ The airline industry is close to $900 billion in size worldwide as of 2019, with
 ## Description of source data
 This dataset provides information on the flights in 2015. Data includes the date of the flight, the airline, flight and tail number, the origin and destination airport, the times and distance associated with the flights as well as the reason for delay and if the flight was cancelled or diverted. With 31 columns and so much data, we will remove certain columns to clean the dataset. Those columns include the year because all this data is only for 2015. We will also remove the cancellation reason column because 98% of the values are null. As well, we will remove all the flights that were cancelled as it does not provide us with any data on factors that could’ve influence delay and we will remove the whole cancelled column as well.
 
- 
-## Below is the Pandas project files and folders description as of Segment-2:-
-
-1)	Database: Data base folder has 3 files in it :-
-
-  a.	Database.ipynb : Though this file, connected to Database to create new flight database using postgres. 
-  b.	Schema.png : This is the ERD that shows the relationship among Flights, Airlines and Airports table.
-  c.	Schema.txt : ERD text file
-
-2)	Flight Delay Predictor: This is the PPT for our project eliciting the problem that we are trying to solve through our analysis, steps taken, tool used and machine learning model used.
-
-3)	Readme.md : This file has the high-level information and flow of the project.
-
-4)	Data_Cleaning _Final: In this file, data cleansing and exploration analysis is completed for the project analysis.
-
-5)	ML_1.0: This file has the machine learning model used for the analysis.
-
-6)	Source_data.txt: This file contains the link for the original data source from Kaggle.
-
-
-
-
 ## Question 
 Which factors influence flight delays, and by how many minutes? 
 
@@ -50,11 +28,56 @@ Due to the size of the data and memory limitations, the data was read in chunks.
 Tensor flow Keras' sequential model was used to create a deep neural net (DNN). This was chosen becasue DNN's perform well with large amounts of data, have the ability to learn and model non-linear and complex relatonships, perform well with high volatility and non-constant variance, and has superior prediction power to other regression models. 
 Our model was tuned using hyper parameter testing on the number of neurons in each hidden level, and activation functions. Overfitting was prevented by hyper parameter tuning the number of epochs. 
 
-
 ## Dashboard
 Dash will be used to visualize our results and create a story answering our question. 
-
 
 ## Google Slide Deck Link
 https://docs.google.com/presentation/d/1lVltMy94bXFktCDCRaQnMVSpEe5rUilISrqvT9a1mas/edit?usp=sharing
 
+## File Navigation
+
+1)	Database: Database folder
+
+  a.	Database.ipynb: Though this file, connected to Database to create new flight database using postgres. 
+  b.	schema.png: This is the ERD that shows the relationship among Flights, Airlines and Airports table.
+  c.	schema.txt: ERD text file.
+
+2)	figures: folder of data visualizations
+  
+  a. readme.md: Describes and displays data visualizations.
+  
+  b. airline_arrival_delay.png
+  
+  c. airline_departure_delay.png
+  
+  d. month_arrival_delay.png
+  
+  e. month_departure_delay.png
+  
+  f. time_arrival_delay.png
+  
+  g. time_departure_delay.png
+
+3) machine_learning: Machine Learning folder
+
+  a. checkpoints: checkpoints folder
+  
+  b. hyper_parameter_tuning.ipynb: Oulines changes made to the machine learning model to improve accuracy.
+  
+  c. ml_arrival_delay.ipynb: Machine learning model for arrival delays.
+  
+  d. ml_departure_delay.ipynb: Machine learning model for departude delays. 
+
+4) .gitignore
+
+5)	README.md: High-level information and flow of the project.
+
+6)	data_cleaning_file.ipynb: Data cleaning and exploration analysis is completed for the project analysis.
+
+7) data_vis.ipynb: Code for creating all data visualizations.
+
+8) flight_delay_predictor.ppt: PPT file eliciting the problem that we are trying to solve through our analysis, steps taken, tools used and machine learning model used.
+
+9) requirements.txt: A list of all the technologies needed to run the analysis.
+
+8)	source_data.txt: The link for the original data source from Kaggle.
