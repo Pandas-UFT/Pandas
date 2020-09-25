@@ -28,6 +28,10 @@ Due to the size of the data and memory limitations, the data was read in chunks.
 Tensor flow Keras' sequential model was used to create a deep neural net (DNN). This was chosen becasue DNN's perform well with large amounts of data, have the ability to learn and model non-linear and complex relatonships, perform well with high volatility and non-constant variance, and has superior prediction power to other regression models. 
 Our model was tuned using hyper parameter testing on the number of neurons in each hidden level, and activation functions. Overfitting was prevented by hyper parameter tuning the number of epochs. 
 
+#### Accuracy
+The departure and arrival delay times currently have a mean squared error of approximately 155, and an average error of 12.25 minutes. 
+
+
 ## Dashboard
 Dash will be used to visualize our results and create a story answering our question. 
 
