@@ -13,7 +13,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash()
 
 # Data source
-df = pd.read_csv('../resources/flights_sample.csv')
+df = pd.read_csv('../flights_sample.csv')
 
 # Dict of colours
 colors = {
