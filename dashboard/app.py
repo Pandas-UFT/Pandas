@@ -40,6 +40,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         children='How late will your flight be?',
         style={
             'textAlign': 'left',
+            'font-size': '22px',
             'color': colors['text']
         }
     ),
@@ -50,6 +51,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     html.Div(html.P(['Late flights are a pain, ruining schedules and delaying plans. Use our app to help regain control over your time by planning for your flight delays before they happen.', html.Br(), html.Br()],
         style={
             'textAlign': 'left',
+            'font-size': '22px',
             'color': colors['paragraph']
         })),
     
@@ -93,6 +95,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     html.Div(html.P([html.Br(), 'Our analyses have also shown the following patterns:'],
         style={
             'textAlign': 'left',
+            'font-size': '22px',
             'color': colors['paragraph']
         })),
     
@@ -116,25 +119,58 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     html.Div(html.P([html.Br(), 'Our machine learning is still under development but has shown the following so far.'],
         style={
             'textAlign': 'left',
+            'font-size': '22px',
             'color': colors['paragraph']
         })),
     
+    html.H2(
+        children='Departure Delay',
+        style={
+            'textAlign': 'left',
+            'color': colors['text'],
+            'width': '45%', 
+            'display': 'inline-block'
+        }
+    ),
+        html.H2(
+        children='Arrival Delay',
+        style={
+            'textAlign': 'left',
+            'color': colors['text'],
+            'width': '45%', 
+            'display': 'inline-block'
+        }
+    ),
 
-    html.Img(id= 'ml_arrival', 
-            src='https://github.com/Pandas-UFT/Pandas/blob/master/figures/month_departure_delay.png?raw=true',
-           style={'Align': 'center',
+
+    html.Img(id= 'ml_departure', 
+            src='https://github.com/Pandas-UFT/Pandas/blob/master/figures/departure_mse_error.png?raw=true',
+            style={'Align': 'center',
                 'width': '45%', 
                 'display': 'inline'
                 } 
             ),
-    html.Img(id= 'ml_arrival_graph', 
-            src='https://github.com/Pandas-UFT/Pandas/blob/master/figures/month_departure_delay.png?raw=true',
-           style={'Align': 'center',
+    html.Img(id= 'ml_arrival', 
+            src='https://github.com/Pandas-UFT/Pandas/blob/master/figures/arrival_mse_error.png?raw=true',
+            style={'Align': 'center',
                 'width': '45%', 
-                'display': 'inline'
+                'display': 'inline-block'
+                } 
+            ),
+    html.Img(id= 'ml_departure_graph', 
+            src='https://github.com/Pandas-UFT/Pandas/blob/master/figures/departure_predictions.png?raw=true',
+            style={'Align': 'center',
+                'width': '45%', 
+                'display': 'inline-block'
+                } 
+            ),
+    html.Img(id= 'ml_arrival_graph', 
+            src='https://github.com/Pandas-UFT/Pandas/blob/master/figures/arrival_predictions.png?raw=true',
+            style={'Align': 'center',
+                'width': '45%', 
+                'display': 'inline-block'
                 } 
             )
-
 
 ])
 
