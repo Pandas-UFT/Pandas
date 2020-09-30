@@ -329,7 +329,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background'], 'padding-l
     Input("airline", "value")
     ]
 )
-def predict_delay(d, sa, dd, sd, m, dw, di, a)
+def predict_delay(d, sa, dd, sd, m, dw, di, a):
     predict = d*0.11048671263154038 + sa*0.10619959174532308 + dd*0.1040270876376712 + sd*0.10189558360762008 + m*0.08462700920684066 + dw*0.08313113520744703 + di*0.06509603467532205 + a*1
     prediction = round(predict,4)
     return "Your flight's arrival will be {} minutes delayed.".format(prediction)
