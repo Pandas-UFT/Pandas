@@ -5,7 +5,6 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
-from keras.models import load_model
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
