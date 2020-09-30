@@ -29,7 +29,8 @@ Tensor flow Keras' sequential model was used to create a deep neural net (DNN). 
 Our model was tuned using hyper parameter testing on the number of neurons in each hidden level, and activation functions. Overfitting was prevented by hyper parameter tuning the number of epochs. 
 
 #### Accuracy
-The departure and arrival delay times currently have a mean squared error of approximately 155, and an average error of 12.25 minutes. 
+We used a regression model for our machine learning, which uses the mean squared error (MSE), and coefficient of determination (R squared) value for accuracy instead of the confusion matrix used by classification algorithms. 
+The departure and arrival delay times currently have a mean squared error of approximately 155, and an average error of 12.25 minutes. This error is fairly good considering the range of arrival and departure delays as well as the variance within the data. The arrival delay predictions have an R squared of .56, which is acceptable but not great. Overall the arrival delays are represented correctly by our model 56% of the time. The departure delay had a much smaller R squarred value, and the data we had was not successful in predicting departure delays. To improve this, the variance in the data set would have to be reduced, and separate models can be trained for each individual airport, instead of having airport as a feature. 
 
 
 ## Dashboard
