@@ -1,4 +1,6 @@
-# Airline flight delays in 2015.
+# Airline Flight Delays
+
+We decided to base our project on flight delays in 2015.
 
 # Reason for selection
 The airline industry is close to $900 billion in size worldwide as of 2019, with flight delays costing the industry $8 billion annually. Being able to predict which factors influence delays and by how many minutes, is the question airlines have been struggling to answer since their inception.
@@ -16,7 +18,7 @@ Which factors influence flight delays, and by how many minutes?
 Pandas will be used to create a DataFrame, clean the data, and perform exploratory analysis. Additional analysis will be completed using Python.
 
 ## Database Storage
-Postgres is the database we intend to use, and we will use pgAdmin to display the data. 
+We used Postgres to store the data. We accessed and manipulated the database using Python through Jupyter Notebook. 
 
 ## Machine Learning
 
@@ -36,7 +38,7 @@ The departure and arrival delay times currently have a mean squared error of app
 
 ## Dashboard
 Dash was used to visualise our findings. A preview of our dashboard is displayed here
-![dash_preview](https://www.kaggle.com/usdot/flight-delays)
+![dash_preview](https://github.com/Pandas-UFT/Pandas/blob/master/figures/dash_preview.png?raw=true)
 
 and the functional dashboard is deployed and available here on [Heroku](https://pandas-flight-dashboard.herokuapp.com/).
 
