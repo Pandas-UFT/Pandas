@@ -6,7 +6,7 @@ We decided to base our project on flight delays in 2015.
 The airline industry is close to $900 billion in size worldwide as of 2019, with flight delays costing the industry $8 billion annually. Being able to predict which factors influence delays and by how many minutes, is the question airlines have been struggling to answer since their inception.
 
 ## Description of source data
-Our data was obtained from [Kaggle](https://www.kaggle.com/usdot/flight-delays)
+Our data was obtained from [Kaggle](https://www.kaggle.com/usdot/flight-delays).
 
 This dataset provides information on the flights in 2015. Data includes the date of the flight, the airline, flight and tail number, the origin and destination airport, the times and distance associated with the flights as well as the reason for delay and if the flight was cancelled or diverted. With 31 columns and so much data, we will remove certain columns to clean the dataset. Those columns include the year because all this data is only for 2015. We will also remove the cancellation reason column because 98% of the values are null. As well, we will remove all the flights that were cancelled as it does not provide us with any data on factors that could’ve influence delay and we will remove the whole cancelled column as well.
 
