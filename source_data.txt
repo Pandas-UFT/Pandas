@@ -1,3 +1,0 @@
-Link to data source
-
-https://www.kaggle.com/usdot/flight-delays
