@@ -1,10 +1,11 @@
-## Selected Topic
-Airline flight delays in 2015.
+# Airline flight delays in 2015.
 
 # Reason for selection
 The airline industry is close to $900 billion in size worldwide as of 2019, with flight delays costing the industry $8 billion annually. Being able to predict which factors influence delays and by how many minutes, is the question airlines have been struggling to answer since their inception.
 
 ## Description of source data
+Our data was obtained from [Kaggle](https://www.kaggle.com/usdot/flight-delays)
+
 This dataset provides information on the flights in 2015. Data includes the date of the flight, the airline, flight and tail number, the origin and destination airport, the times and distance associated with the flights as well as the reason for delay and if the flight was cancelled or diverted. With 31 columns and so much data, we will remove certain columns to clean the dataset. Those columns include the year because all this data is only for 2015. We will also remove the cancellation reason column because 98% of the values are null. As well, we will remove all the flights that were cancelled as it does not provide us with any data on factors that could’ve influence delay and we will remove the whole cancelled column as well.
 
 ## Question 
@@ -34,57 +35,62 @@ The departure and arrival delay times currently have a mean squared error of app
 
 
 ## Dashboard
-Dash will be used to visualize our results and create a story answering our question. 
+Dash was used to visualise our findings. A preview of our dashboard is displayed here
+![dash_preview](https://www.kaggle.com/usdot/flight-delays)
+
+and the functional dashboard is deployed and available here on [Heroku](https://pandas-flight-dashboard.herokuapp.com/).
+
+A quick video of the dashboard is also available for download [here](https://github.com/Pandas-UFT/Pandas/blob/master/dashboard/dashboard.mp4) on github.
 
 ## Google Slide Deck Link
-https://docs.google.com/presentation/d/1lVltMy94bXFktCDCRaQnMVSpEe5rUilISrqvT9a1mas/edit?usp=sharing
+
+Our presentation is available [here](https://docs.google.com/presentation/d/1lVltMy94bXFktCDCRaQnMVSpEe5rUilISrqvT9a1mas/edit?usp=sharing).
 
 ## File Navigation
 
-1)	Database: Database folder
+* dashboard: dashboard folder
+  * readme.md: describes and depicts dashboard
+  * app.py: our dashboard app built using Plotly's Dash framework
+  * dashboard.mp4: a downloadable video showing our dashboard's features
 
-  a.	Database.ipynb: Though this file, connected to Database to create new flight database using postgres. 
-  
-  b.	schema.png: This is the ERD that shows the relationship among Flights, Airlines and Airports table.
-  
-  c.	schema.txt: ERD text file.
+* database: database folder
+  * database.ipynb: This file connects to postgres to create the flights database
+  * schema.png: This is the Entity Relationship Diagram (ERD) that shows the relationship among the Flights, Airlines and Airports tables
+  * schema.txt: text file that can be used to create the ERD
 
-2)	figures: folder of data visualizations
-  
-  a. readme.md: Describes and displays data visualizations.
-  
-  b. airline_arrival_delay.png
-  
-  c. airline_departure_delay.png
-  
-  d. month_arrival_delay.png
-  
-  e. month_departure_delay.png
-  
-  f. time_arrival_delay.png
-  
-  g. time_departure_delay.png
+* figures: folder of data visualizations
+  * readme.md: Describes and displays data visualizations
+  * airline_arrival_delay.png
+  * airline_departure_delay.png
+  * arrival_predictions.png
+  * correlation_matrix.PNG
+  * dash_preview.png
+  * dashboard.png
+  * departure_predictions.png
+  * month_arrival_delay.png
+  * month_departure_delay.png
+  * prediction_forest_plot.PNG
+  * prediction_plot.PNG
+  * time_arrival_delay.png
+  * time_departure_delay.png
 
-3) machine_learning: Machine Learning folder
+* machine_learning: Machine Learning folder
+  * checkpoints: checkpoints folder
+  * hyper_parameter_tuning.ipynb: Oulines changes made to the machine learning model to improve accuracy
+  * ml_arrival_delay.ipynb: Machine learning model for arrival delays
+  * ml_departure_delay.ipynb: Machine learning model for departude delays
 
-  a. checkpoints: checkpoints folder
-  
-  b. hyper_parameter_tuning.ipynb: Oulines changes made to the machine learning model to improve accuracy.
-  
-  c. ml_arrival_delay.ipynb: Machine learning model for arrival delays.
-  
-  d. ml_departure_delay.ipynb: Machine learning model for departude delays. 
+* resources: Resource folder wherein data files were stored on local machines
+  * flights_complete_sample.csv: data source for building the dashboard to accomodate Heroku's deployment size limits
 
-4) .gitignore
+* .gitignore
 
-5)	README.md: High-level information and flow of the project.
+* README.md: High-level information and flow of the project
 
-6)	data_cleaning_file.ipynb: Data cleaning and exploration analysis is completed for the project analysis.
+* data_cleaning_file.ipynb: Data cleaning and exploration analysis is completed for the project analysis
 
-7) data_vis.ipynb: Code for creating all data visualizations.
+* data_vis.ipynb: Code for creating all data visualizations
 
-8) flight_delay_predictor.ppt: PPT file eliciting the problem that we are trying to solve through our analysis, steps taken, tools used and machine learning model used.
+* flight_delay_predictor.ppt: PPT file eliciting the problem that we are trying to solve through our analysis, steps taken, tools used and machine learning model used
 
-9) requirements.txt: A list of all the technologies needed to run the analysis.
-
-8)	source_data.txt: The link for the original data source from Kaggle.
+* requirements.txt: A list of all the technologies needed to run the analysis
